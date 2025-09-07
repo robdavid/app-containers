@@ -1,0 +1,26 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Firefox (on browserbox)
+GenericName=Web Browser (on browserbox)
+Comment=Browse the Web
+Icon=firefox
+Exec=/usr/bin/distrobox-enter -n browserbox -- runff.sh %u
+Actions=new-window;new-private-window;profile-manager-window;
+MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
+Categories=Network;WebBrowser;
+Keywords=web;browser;internet;
+StartupNotify=true
+StartupWMClass=org.mozilla.firefox
+
+[Desktop Action new-window]
+Name=New Window (on browserbox)
+Exec=/usr/bin/distrobox-enter  -n browserbox  --   runff.sh --new-window  %u 
+
+[Desktop Action new-private-window]
+Name=New Private Window (on browserbox)
+Exec=/usr/bin/distrobox-enter  -n browserbox  --   runff.sh --private-window  %u 
+
+[Desktop Action profile-manager-window]
+Name=Open the Profile Manager (on browserbox)
+Exec=/usr/bin/distrobox-enter  -n browserbox  --   runff.sh --ProfileManager 

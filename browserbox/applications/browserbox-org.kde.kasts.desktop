@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Kasts (on browserbox)
+GenericName=Podcast Application (on browserbox)
+Comment=Mobile Podcast Application
+Icon=kasts
+Exec=/usr/bin/distrobox-enter -n browserbox -- kasts
+Actions=
+Categories=Feed;KDE;Network;Qt;
+Keywords=podcast;
+StartupNotify=true
+StartupWMClass=org.kde.kasts
