@@ -1,0 +1,12 @@
+# Update application containers
+
+[Unit]
+Description=App container upgrades
+Wants=app-container-update.timer
+
+[Service]
+Type=oneshot
+ExecStart=distrobox upgrade browserbox
+
+[Install]
+WantedBy=multi-user.target
