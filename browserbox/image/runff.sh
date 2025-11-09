@@ -1,4 +1,4 @@
 #!/bin/bash
-unset WAYLAND_DISPLAY
+# unset WAYLAND_DISPLAY
 exec /usr/bin/firefox "$@"
 
