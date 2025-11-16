@@ -1,0 +1,13 @@
+# Update application containers
+
+[Unit]
+Description=Appbox container upgrades
+Wants=appbox-update.timer
+
+[Service]
+Type=oneshot
+ExecStart=distrobox upgrade Appbox
+ExecStart=distrobox enter Appbox -- yay -Sua --noconfirm
+
+[Install]
+WantedBy=multi-user.target

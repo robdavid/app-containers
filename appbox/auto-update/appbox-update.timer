@@ -1,0 +1,12 @@
+# Update application containers on a schedule
+
+[Unit]
+Description=Triggers automated package updates of application containers
+Requires=appbox-update.service
+
+[Timer]
+Unit=appbox-update.service
+OnCalendar=*-*-* 6,12,18,22:00:00
+
+[Install]
+WantedBy=timers.target
